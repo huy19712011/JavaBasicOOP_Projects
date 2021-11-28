@@ -1,0 +1,6 @@
+1002, nguyen van b, BTEC D05 K12, Ha Noi
+1003, nguyen van c, BTEC D05 K12, Ha Noi
+1005, nguyen van e, BTEC D05 K12, Ha Noi
+1006, nguyen van f, BTEC D05 K12, Ha Noi
+1004, nguyen van d, BTEC D05 K12, Ha Noi
+1001, nguyen van a, BTEC D05 K12, Ha Noi
