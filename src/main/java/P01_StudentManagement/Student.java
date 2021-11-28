@@ -23,9 +23,9 @@ public class Student implements Serializable {
     }
 
     // methods
-    public Student input() {
+    public Student input(Scanner sc) {
 
-        Scanner sc = new Scanner(System.in);
+        //Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter student id: ");
         //System.out.println("Input student information:");

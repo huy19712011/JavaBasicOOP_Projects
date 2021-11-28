@@ -51,9 +51,9 @@ public class StudentManager {
         //Collections.sort(students, Collections.reverseOrder((s1, s2) -> s1.getId() - s2.getId()));
     }
 
-    public void addStudent() {
+    public void addStudent(Scanner sc) {
 
-        this.students.add(new Student().input());
+        this.students.add(new Student().input(sc));
     }
 
     public Student findByName(String name) {

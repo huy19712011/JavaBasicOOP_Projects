@@ -75,7 +75,7 @@ public class Main {
             switch (choose) {
                 case "1":
                     System.out.println("Add student");
-                    studentManager.addStudent();
+                    studentManager.addStudent(scanner);
                     break;
                 case "2":
                     System.out.println("Enter id: ");
