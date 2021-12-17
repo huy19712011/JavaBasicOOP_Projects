@@ -44,24 +44,23 @@ public class StudentManager {
 
         Collections.sort(this.students, (s1, s2) -> s1.getName().compareTo(s2.getName()));
 
-        //students.stream().sorted((s1, s2) -> s1.getName().compareTo(s2.getName())).collect(Collectors.toList());
+        //students = students.stream().sorted((s1, s2) -> s1.getName().compareTo(s2.getName())).collect(Collectors.toList());
 
-        //students.stream().sorted(Comparator.comparing(Student::getName).reversed()).collect(Collectors.toList());
+        //students = students.stream().sorted(Comparator.comparing(Student::getName).reversed()).collect(Collectors.toList());
 
-        //students.stream().sorted(Comparator.comparing(s -> s.getName())).collect(Collectors.toList());
+        //students = students.stream().sorted(Comparator.comparing(Student::getName).reversed()).collect(Collectors.toList());
 
     }
 
     public void sortById() {
 
         //Collections.sort(students, (s1, s2) -> s1.getId() - s2.getId());
-
         Collections.sort(students, (s1, s2) -> Integer.compare(s1.getId(), s2.getId()));
-
         //Collections.sort(students, Collections.reverseOrder((s1, s2) -> s1.getId() - s2.getId()));
 
         // using stream()
-        //students.stream().sorted((s1, s2) -> Integer.compare(s1.getId(), s2.getId())).collect(Collectors.toList());
+        //students = students.stream().sorted((s1, s2) -> Integer.compare(s1.getId(), s2.getId())).collect(Collectors.toList());
+        //students = students.stream().sorted(Comparator.comparing(Student::getId).reversed()).collect(Collectors.toList());
 
     }
 
