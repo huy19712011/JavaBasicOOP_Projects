@@ -78,10 +78,12 @@ public class Main {
                     studentManager.addStudent(scanner);
                     break;
                 case "2":
-                    System.out.println("Enter id: ");
-                    studentId = scanner.nextInt();
-                    scanner.nextLine(); // ignore new line
-                    studentManager.edit(studentId);
+                    System.out.println("Update student:");
+                    //System.out.println("Enter id: ");
+                    //studentId = scanner.nextInt();
+                    //scanner.nextLine(); // ignore new line
+                    //studentManager.edit(studentId);
+                    studentManager.edit2(scanner);
                     break;
                 case "3":
                     System.out.println("Enter id: ");

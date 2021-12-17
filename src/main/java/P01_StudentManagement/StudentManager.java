@@ -2,8 +2,11 @@ package P01_StudentManagement;
 
 import java.io.IOException;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StudentManager {
 
@@ -40,6 +43,13 @@ public class StudentManager {
     public void sortByName() {
 
         Collections.sort(this.students, (s1, s2) -> s1.getName().compareTo(s2.getName()));
+
+        //students.stream().sorted((s1, s2) -> s1.getName().compareTo(s2.getName())).collect(Collectors.toList());
+
+        //students.stream().sorted(Comparator.comparing(Student::getName).reversed()).collect(Collectors.toList());
+
+        //students.stream().sorted(Comparator.comparing(s -> s.getName())).collect(Collectors.toList());
+
     }
 
     public void sortById() {
@@ -49,6 +59,10 @@ public class StudentManager {
         Collections.sort(students, (s1, s2) -> Integer.compare(s1.getId(), s2.getId()));
 
         //Collections.sort(students, Collections.reverseOrder((s1, s2) -> s1.getId() - s2.getId()));
+
+        // using stream()
+        //students.stream().sorted((s1, s2) -> Integer.compare(s1.getId(), s2.getId())).collect(Collectors.toList());
+
     }
 
     public void addStudent(Scanner sc) {
@@ -98,6 +112,15 @@ public class StudentManager {
         System.out.println("Enter new name: ");
         String newName = scanner.nextLine();
         student.setName(newName);
+    }
+
+    public void edit2(Scanner sc) {
+        System.out.println("Enter id: ");
+        int id = sc.nextInt();
+        sc.nextLine(); // ignore new line
+
+        Student student = findById(id);
+        student.edit2(sc);
     }
 
     public void showAll() {

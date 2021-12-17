@@ -47,6 +47,23 @@ public class Student implements Serializable {
 
     }
 
+    public void edit2(Scanner sc) {
+
+        System.out.println("Enter new name: ");
+        String name = sc.nextLine();
+
+        System.out.println("Enter new class: ");
+        String klass = sc.nextLine();
+
+        System.out.println("Enter new address: ");
+        String address = sc.nextLine();
+
+        this.name = name;
+        this.klass = klass;
+        this.address = address;
+
+    }
+
     public void showInfo() {
 
         System.out.printf("%-5d %-20s %-15s %-15s \n", id, name, klass, address);
